@@ -1,9 +1,4 @@
 <?php
-
-/**
- * This example shows sending a message using a local sendmail binary.
- */
-
 //Import the PHPMailer class into the global namespace
 //PHPMailer dependecies
 
@@ -32,7 +27,6 @@ try{
     $mail->Encoding = 'base64';
     $mail->setLanguage('cs', 'PHPMailer-master/language/');
     
-    //confirmation html message
     date_default_timezone_set('Europe/Prague');
     $dateTime = date('d.m.Y H:i:s', time());
 
@@ -42,7 +36,18 @@ try{
     $parentname = $_POST["parentname"];
     $contactemail = $_POST["email"];
     $contactnumber = $_POST["tel"];
+    
+    //recaptcha v2
+    $secretKey = "6LesY4oaAAAAANZaZoxbV_MP74qp8Mz0OAwG3dxh";
+    $responseKey = $_POST["g-recaptcha-response"];
+    $UserIP = $_SERVER["REMOTE_ADDR"];
+    $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$UserIP";
 
+    $response = file_get_contents($url);
+    $response = json_decode($response);
+    
+    if($response->success){
+        
     $subject = "Nová registrace od " . $parentname;
     
     //encode subject
@@ -76,7 +81,7 @@ try{
     $mail->Port = 587;
     $mail->SMTPAuth = true;
     $mail->Username = "form@meetandplay.cz";
-    $mail->Password = "69420";
+    $mail->Password = "xxxxx";
     $mail->SMTPSecure = 'tls';
     
     //Set PHPMailer to use the sendmail transport
@@ -107,12 +112,13 @@ try{
         $statusMessage = "<div class='form-group row mb-3'><div class='col-md-12' id='statusMessage'><div class='alert alert-success'><span class='mr-1'><i class='fas fa-check'></i></span>Registrace byla úspěšná, brzy budete kontaktováni. </div></div></div>";
     }
     }
+    }
 //catch and output exceptions
 } catch (Exception $e) {
     $e->errorMessage();
-    $statusMessage = "<div class='form-group row mb-3'><div class='col-md-12' id='statusMessage'><div class='alert alert-danger'><span class='mr-1'><i class='fas fa-times-circle'></i></span>Error: Objednávku se nepodařilo odeslat. Podrobnosti: " . $e . "</div></div></div>";
+    $statusMessage = "<div class='form-group row mb-3'><div class='col-md-12' id='statusMessage'><div class='alert alert-danger'><span class='mr-1'><i class='fas fa-times-circle'></i></span>Error: Přihlášku se nepodařilo odeslat. Podrobnosti: " . $e . "</div></div></div>";
 
 } catch (\Exception $e) {
     $e->getMessage();
-    $statusMessage = "<div class='form-group row mb-3'><div class='col-md-12' id='statusMessage'><div class='alert alert-danger'><span class='mr-1'><i class='fas fa-times-circle'></i></span>Error: Objednávku se nepodařilo odeslat. Podrobnosti: " . $e . "</div></div></div>";
+    $statusMessage = "<div class='form-group row mb-3'><div class='col-md-12' id='statusMessage'><div class='alert alert-danger'><span class='mr-1'><i class='fas fa-times-circle'></i></span>Error: Přihlášku se nepodařilo odeslat. Podrobnosti: " . $e . "</div></div></div>";
 }

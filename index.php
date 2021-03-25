@@ -16,6 +16,7 @@ require_once "mailer.php";
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/typography.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"
@@ -27,6 +28,7 @@ require_once "mailer.php";
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
     </script>
+    <script>window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>');</script>
     <!--/*
     ⠄⢀⣀⣤⣴⣶⣶⣤⣄⡀⠄⠄⣀⣤⣤⣤⣤⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
     ⣴⣏⣹⣿⠿⠿⠿⠿⢿⣿⣄⢿⣿⣿⣿⣿⣿⣋⣷⡄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
@@ -80,7 +82,8 @@ require_once "mailer.php";
             <p>Nejdůležitějším cílem naší práce je vhodná a velmi potřebná motivace dětí, bez ohledu na věk či jazykovou
                 úroveň. Posláním je pro nás především zpřístupnění možnosti učení cizího jazyka pro každého malého
                 zájemce.</p>
-            <p>V roce 2021 jsme navázali spolupráci s katedrou anglického jazyka <a href="https://kaj.fp.tul.cz/">Technické univerzity v
+            <p>V roce 2021 jsme navázali spolupráci s katedrou anglického jazyka <a
+                    href="https://kaj.fp.tul.cz/">Technické univerzity v
                     Liberci</a>.<br />
                 Díky této spolupráci Vám můžeme nabídnout anglický příměstský tábor, kde bude přítomný rodilý mluvčí
                 <b>Christopher Muffett</b>.</p>
@@ -101,7 +104,8 @@ require_once "mailer.php";
                 projektů. Cílem naší práce je zainteresovat každého jedince. Kromě využívání moderních technologií velmi
                 často využíváme vlastnoručně vyrobené pomůcky.</p>
             <p>Pokud s námi chcete zůstat v kontaktu nebo se dozvědět perličky z angličtiny, určitě koukněte na náš <a
-                    href="https://www.instagram.com/_meetandplay_/">instagram</a> a <a href="https://www.facebook.com/meetandplay1">facebook</a>.</p>
+                    href="https://www.instagram.com/_meetandplay_/">instagram</a> a <a
+                    href="https://www.facebook.com/meetandplay1">facebook</a>.</p>
             <figure>
                 <img src="./img/foto_OUR_TEAM.jpg" alt="náš tým">
                 <figcaption>our team photo</figcaption>
@@ -167,6 +171,8 @@ require_once "mailer.php";
                 <label>KONTAKTNÍ TELEFONNÍ ČÍSLO</label>
                 <input class="form-control" type="tel" name="tel" placeholder="+420 123 456 789" required><br>
             </div>
+            <div class="g-recaptcha" data-sitekey="6LesY4oaAAAAAODON4x5c5Dv1MXDXr7HKXtLzANj"></div>
+            <br />
             <button type="submit" name="submit">LET'S PLAY!</button>
         </form>
         <div>
@@ -189,7 +195,8 @@ require_once "mailer.php";
             <figcaption>logo meet and play</figcaption>
         </figure>
     </footer>
-    <div class="credits"><span>website created by <a href="https://www.instagram.com/viktoranriil/">Viktor Zoubek</a></span><span><a href="mailto:viktorzoubek7@gmail.com">contact me</a></span></div>
+    <div class="credits"><span>website created by <a href="https://www.instagram.com/viktoranriil/">Viktor
+                Zoubek</a></span><span><a href="mailto:viktorzoubek7@gmail.com">viktorzoubek7@gmail.com</a></span></div>
     <script>
         const burgerBtn = document.querySelector(".burgerButton");
         const menuBall = document.querySelector(".menu");
@@ -254,4 +261,5 @@ require_once "mailer.php";
         });
     </script>
 </body>
+
 </html>
