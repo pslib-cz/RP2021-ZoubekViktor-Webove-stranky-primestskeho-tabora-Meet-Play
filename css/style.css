@@ -1,10 +1,3 @@
-:root {
-    --red: #DC0023;
-    --blue: #00206D;
-    --darkred: #9A021A;
-    --gray: #D3D3D3;
-}
-
 html {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
@@ -82,7 +75,7 @@ p>a {
     left: 45px;
     top: 45px;
     z-index: 1;
-    background-color: var(--red);
+    background-color: #DC0023;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -99,7 +92,7 @@ p>a {
     height: 0px;
     left: 0px;
     top: 0px;
-    background-color: var(--blue);
+    background-color: #00206D;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -116,7 +109,7 @@ p>a {
     left: -300px;
     top: -300px;
     z-index: 1;
-    background-color: var(--red);
+    background-color: #DC0023;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -180,7 +173,7 @@ p>a {
     -o-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    background-color: var(--blue);
+    background-color: #00206D;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -301,7 +294,7 @@ b {
 }
 
 .startButton {
-    background-color: var(--blue);
+    background-color: #00206D;
     color: white;
     font-family: "Roboto Slab", Georgia, 'Times New Roman', Times, serif;
     font-weight: 300;
@@ -331,8 +324,8 @@ b {
 .startButton a:hover {
     text-decoration: none;
     background-color: white;
-    color: var(--blue);
-    border: 2px solid var(--blue);
+    color: #00206D;
+    border: 2px solid #00206D;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
@@ -341,8 +334,8 @@ b {
 .startButton a:active {
     text-decoration: none;
     background-color: white;
-    color: var(--blue);
-    border: 2px solid var(--blue);
+    color: #00206D;
+    border: 2px solid #00206D;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
@@ -354,7 +347,7 @@ main h2 {
     font-style: normal;
     font-size: 1.2em;
     display: block;
-    background-color: var(--red);
+    background-color: #DC0023;
     text-align: center;
     line-height: 2.5em;
     height: 2.5em;
@@ -390,7 +383,7 @@ h3 {
     font-size: 0.9em;
     max-width: 90%;
     display: block;
-    background-color: var(--blue);
+    background-color: #00206D;
     margin: 0 5%;
     text-align: center;
     line-height: 3em;
@@ -415,7 +408,7 @@ section>p {
 }
 
 .contact-form>div>input {
-    border: 2px solid var(--gray);
+    border: 2px solid #D3D3D3;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
@@ -426,7 +419,7 @@ section>p {
 .contact-form>div>label {
     display: block;
     font-family: "Roboto Slab", Georgia, 'Times New Roman', Times, serif;
-    color: var(--blue);
+    color: #00206D;
     margin: 0.6em 0 0.3em 0;
 }
 
@@ -439,6 +432,11 @@ section>p {
     text-align: center;
 }
 
+.date input {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .date:first-child {
     padding-bottom: 0.6em;
 }
@@ -446,7 +444,7 @@ section>p {
 .contact-form button {
     font-family: "Roboto Slab", Georgia, 'Times New Roman', Times, serif;
     color: white;
-    background-color: var(--red);
+    background-color: #DC0023;
     line-height: 2.5em;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
@@ -461,7 +459,7 @@ section>p {
 }
 
 .contact-form button:hover {
-    background-color: var(--darkred);
+    background-color: #9A021A;
 }
 
 footer {
@@ -519,7 +517,7 @@ footer img {
     flex-wrap: wrap;
     padding: 0.5em 0;
     color: white;
-    background-color: var(--blue);
+    background-color: #00206D;
 }
 
 .icons {
@@ -588,7 +586,7 @@ footer img {
         -moz-box-pack: center;
         justify-content: center;
         font-size: 2em;
-        color: var(--blue);
+        color: #00206D;
         position: relative;
     }
 
@@ -722,7 +720,7 @@ footer img {
         -moz-box-pack: space-evenly;
         justify-content: space-evenly;
         font-size: 2em;
-        color: var(--blue);
+        color: #00206D;
         position: relative;
         height: 10%;
     }
@@ -764,7 +762,7 @@ footer img {
 
     .aboutProject figure {
         max-width: 30%;
-        margin: 1em auto;
+        margin: 2em auto;
     }
 }
 

@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * This example shows sending a message using a local sendmail binary.
+ */
+
 //Import the PHPMailer class into the global namespace
 //PHPMailer dependecies
 
@@ -55,7 +60,7 @@ try{
     $encoded_subject = iconv_mime_encode('Subject', $subject, $preferences);
     $encoded_subject = substr($encoded_subject, strlen('Subject: '));
     
-    if ($datenumber = 1){
+    if ($datenumber == 1){
         $date = "12. - 16. 7. 2021";
     } else{
         $date = "19. - 23. 7. 2021";
@@ -81,7 +86,7 @@ try{
     $mail->Port = 587;
     $mail->SMTPAuth = true;
     $mail->Username = "form@meetandplay.cz";
-    $mail->Password = "xxxxx";
+    $mail->Password = "xxxxxx";
     $mail->SMTPSecure = 'tls';
     
     //Set PHPMailer to use the sendmail transport
