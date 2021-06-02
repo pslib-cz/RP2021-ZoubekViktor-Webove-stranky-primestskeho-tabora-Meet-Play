@@ -17,12 +17,6 @@ require_once "mailer.php";
     <link rel="stylesheet" href="./css/typography.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    </script>
-    <script>
-        window.MSInputMethodContext && document.documentMode && document.write(
-            '<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\/script>'
-            );
-    </script>
     <!--/*
     ⠄⢀⣀⣤⣴⣶⣶⣤⣄⡀⠄⠄⣀⣤⣤⣤⣤⡀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
     ⣴⣏⣹⣿⠿⠿⠿⠿⢿⣿⣄⢿⣿⣿⣿⣿⣿⣋⣷⡄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
@@ -50,10 +44,10 @@ require_once "mailer.php";
         </div>
         <nav>
             <ul>
-                <li><a href="#oprojektu" onclick="autoClose()">O PROJEKTU</a></li>
-                <li><a href="#nastym" onclick="autoClose()">NÁŠ TÝM</a></li>
-                <li><a href="#kurzy" onclick="autoClose()">KURZY</a></li>
-                <li><a href="#kontakt" onclick="autoClose()">KONTAKT</a></li>
+                <li><a href="#oprojektu" onclick="autoClose()">O projektu</a></li>
+                <li><a href="#nastym" onclick="autoClose()">Náš tým</a></li>
+                <li><a href="#kurzy" onclick="autoClose()">Kurzy</a></li>
+                <li><a href="#kontakt" onclick="autoClose()">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -80,11 +74,11 @@ require_once "mailer.php";
             src="./img/texturedlogo_lf8iad_c_scale,w_1794.png" alt="meet and play">
             <figcaption>logo meet and play</figcaption>
         </figure>
-        <div class="startButton"><a href="#contactForm">PŘIHLAS SE</a></div>
+        <div class="startButton"><a href="#contactForm">Přihlas se</a></div>
     </div>
     <main>
         <article class="aboutProject" id="oprojektu">
-            <h2>O PROJEKTU</h2>
+            <h2>O projektu</h2>
             <p class="headline">Tento projekt byl vytvořen s velikým odhodláním usnadnit učení nejpoužívanějšího cizího
                 jazyka v ČR, a to přímo u nás v Liberci!</p>
             <p>Koncept Meet&Play je založen především na známém mottu Jana Ámose Komenského "Škola hrou" a přesně v
@@ -110,7 +104,7 @@ require_once "mailer.php";
             </figure>
         </article>
         <article class="ourTeam" id="nastym">
-            <h2>NÁŠ TÝM</h2>
+            <h2>Náš tým</h2>
             <p class="headline">Jsme kreativní dvojka, která se výuce anglického jazyka věnuje již několik let, a to jak
                 na základní škole, tak formou individuální výuky klientů různého věku.</p>
             <p>Ivet v roce 2020 úspěšně dokončila bakalářské studium na katedře angličtiny v Liberci a nyní je
@@ -139,13 +133,13 @@ require_once "mailer.php";
             </figure>
         </article>
         <article class="courses" id="kurzy">
-            <h2>KURZY</h2>
+            <h2>Kurzy</h2>
             <p><b>Proč právě k nám?</b> Důvodů je hned několik! Jsme mladá kreativní dvojka plná energie, se kterou se
                 rozhodně nebudete nudit! Máme pro Vás připravený nabitý program, díky kterému si odnesete nové znalosti,
                 zkušenosti a užijeme si spoustu legrace!</p>
             <section>
                 <div class="sectionHeader">
-                    <h3>ANGLICKÝ PŘÍMĚSTSKÝ TÁBOR</h3>
+                    <h3>Anglický příměstský tábor</h3>
                 </div>
                 <p>Rády bychom Vám nabídly možnost přihlásit Vaše děti na anglický příměstský tábor, který se bude konat
                     v červenci a to hned ve dvou termínech. První termín je od 12. – 16. 7. 2021 a druhý termín
@@ -179,38 +173,38 @@ require_once "mailer.php";
         </article>
         <form id="contactForm" class="contact-form" method="post" novalidate>
             <div>
-                <label>JMÉNO ÚČASTNÍKA</label>
+                <label>Jméno účastníka</label>
                 <input class="form-control" type="text" name="name" placeholder="Jméno účastníka" required><br>
             </div>
             <div>
-                <label>DATUM NAROZENÍ ÚČASTNÍKA</label>
+                <label>Datum narození účastníka</label>
                 <input class="form-control" type="date" name="birthdate"><br>
             </div>
             <div class="date">
                 <div class="dateOne">
-                    <input type="radio" name="coursedate" id="firstDate" value="1">
+                    <input type="radio" name="coursedate" id="firstDate" value="12. - 16.7. 2021">
                     <label for="firstDate">12. - 16.7. 2021</label>
                 </div>
                 <div class="dateTwo">
-                    <input type="radio" name="coursedate" id="secondDate" value="2">
+                    <input type="radio" name="coursedate" id="secondDate" value="19. - 23.7. 2021">
                     <label for="secondDate">19. - 23.7. 2021</label>
                 </div>
             </div>
             <div>
-                <label>JMÉNO ZÁKONNÉHO ZÁSTUPCE</label>
+                <label>Jméno zákonného zástupce</label>
                 <input class="form-control" type="text" name="parentname" placeholder="Jméno zástupce"><br>
             </div>
             <div>
-                <label>KONTAKTNÍ E-MAIL</label>
+                <label>Kontaktní e-mail</label>
                 <input class="form-control" type="email" name="email" placeholder="meetandplay@email.cz" required><br>
             </div>
             <div>
-                <label>KONTAKTNÍ TELEFONNÍ ČÍSLO</label>
+                <label>Kontaktní telefonní číslo</label>
                 <input class="form-control" type="tel" name="tel" placeholder="+420 123 456 789"><br>
             </div>
-            <div class="g-recaptcha" data-sitekey="6LesY4oaAAAAAODON4x5c5Dv1MXDXr7HKXtLzANj"></div>
+            <div class="g-recaptcha" data-sitekey="xxxxxxxxxxxxxxxxxxx"></div>
             <br />
-            <button type="submit" name="submit">LET'S PLAY!</button>
+            <button type="submit" name="submit">Let's play!</button>
         </form>
         <div>
             <div id="statusMessage"><?php echo $statusMessage;?></div>
@@ -218,7 +212,7 @@ require_once "mailer.php";
     </main>
     <footer>
         <div id="kontakt">
-            <h2>KONTAKT</h2>
+            <h2>Kontakt</h2>
             <a href="tel:+420607715751">+420 607 715 751</a><br>
             <a href="mailto:kontakt@meetandplay.cz">kontakt@meetandplay.cz</a><br>
             <a href="https://kaj.fp.tul.cz/">Katedra anglického jazyka</a>

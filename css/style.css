@@ -133,6 +133,7 @@ p>a {
 .menu ul {
     font-family: "Roboto Slab", Georgia, 'Times New Roman', Times, serif;
     color: white;
+    text-transform: uppercase;
     font-weight: 300;
     font-size: 0px;
     display: -webkit-box;
@@ -319,6 +320,7 @@ b {
 .startButton a {
     display: block;
     padding: 1em 1.8em;
+    text-transform: uppercase;
 }
 
 .startButton a:hover {
@@ -345,6 +347,7 @@ main h2 {
     color: white;
     font-family: "Roboto Slab", Georgia, 'Times New Roman', Times, serif;
     font-style: normal;
+    text-transform: uppercase;
     font-size: 1.2em;
     display: block;
     background-color: #DC0023;
@@ -381,6 +384,7 @@ h3 {
     color: white;
     font-family: "Roboto Slab", Georgia, 'Times New Roman', Times, serif;
     font-size: 0.9em;
+    text-transform: uppercase;
     max-width: 90%;
     display: block;
     background-color: #00206D;
@@ -419,6 +423,7 @@ section>p {
 .contact-form>div>label {
     display: block;
     font-family: "Roboto Slab", Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
     color: #00206D;
     margin: 0.6em 0 0.3em 0;
 }
@@ -443,6 +448,7 @@ section>p {
 
 .contact-form button {
     font-family: "Roboto Slab", Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
     color: white;
     background-color: #DC0023;
     line-height: 2.5em;
@@ -481,6 +487,7 @@ footer {
 footer h2 {
     font-family: "Roboto Slab", Georgia, 'Times New Roman', Times, serif;
     font-weight: 300;
+    text-transform: uppercase;
     margin-bottom: 1em;
     font-style: normal;
 }
@@ -544,7 +551,7 @@ footer img {
     margin: auto;
 }
 
-@media(min-width: 700px) {
+@media(min-width: 700px){
     .burgerButton {
         display: none;
     }
@@ -666,6 +673,22 @@ footer img {
         border-radius: 50px;
         padding: 0 1em 0 1em;
         margin: 1em auto;
+    }
+}
+@media(min-width: 700px) and (orientation: landscape){
+    .landing{
+        height: 100vh;
+    }
+    .logo{
+        max-width: 20%;
+    }
+    .menu{
+        width: 80%;
+        font-size: 0.7em;
+        margin: 20vh auto;
+    }
+    .startButton{
+        top: 70vh;
     }
 }
 

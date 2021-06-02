@@ -1,12 +1,5 @@
 <?php
 
-/**
- * This example shows sending a message using a local sendmail binary.
- */
-
-//Import the PHPMailer class into the global namespace
-//PHPMailer dependecies
-
 $statusMessage = "";
 $parentname = "";
 $contactemail = "";
@@ -37,13 +30,19 @@ try{
 
     $name = $_POST["name"];
     $birthdate = $_POST["birthdate"];
-    $datenumber = $_POST["coursedate"];
+    $date = $_POST["coursedate"];
     $parentname = $_POST["parentname"];
     $contactemail = $_POST["email"];
     $contactnumber = $_POST["tel"];
     
+    //XSS ochrana
+    $name=htmlspecialchars(addslashes(trim($name)));
+    $parentname=htmlspecialchars(addslashes(trim($parentname)));
+    $contactemail=htmlspecialchars(addslashes(trim($contactemail)));
+    $contactnumber=htmlspecialchars(addslashes(trim($contactnumber)));
+
     //recaptcha v2
-    $secretKey = "6LesY4oaAAAAANZaZoxbV_MP74qp8Mz0OAwG3dxh";
+    $secretKey = "xxxxxxxxxxxxxxxxxxxxxxx";
     $responseKey = $_POST["g-recaptcha-response"];
     $UserIP = $_SERVER["REMOTE_ADDR"];
     $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$UserIP";
@@ -60,11 +59,6 @@ try{
     $encoded_subject = iconv_mime_encode('Subject', $subject, $preferences);
     $encoded_subject = substr($encoded_subject, strlen('Subject: '));
     
-    if ($datenumber == 1){
-        $date = "12. - 16. 7. 2021";
-    } else{
-        $date = "19. - 23. 7. 2021";
-    }
 
     $message = '<html><body style="font-size: 16px;">';
     $message .= '<img style="max-width:120px" src="https://meetandplay.cz/img/texturedlogo.png" alt="meetandplay logo" />';
@@ -83,10 +77,10 @@ try{
     $mail->SMTPDebug = 0;
     $mail->IsSMTP();
     $mail->Host = 'mail.hukot.net';
-    $mail->Port = 587;
+    $mail->Port = xxx;
     $mail->SMTPAuth = true;
-    $mail->Username = "form@meetandplay.cz";
-    $mail->Password = "xxxxxx";
+    $mail->Username = "xxxxxxxxxxx";
+    $mail->Password = "xxxxxxxxxxx";
     $mail->SMTPSecure = 'tls';
     
     //Set PHPMailer to use the sendmail transport
